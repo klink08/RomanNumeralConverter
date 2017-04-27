@@ -15,7 +15,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      //Dependencies
+      'node_modules/requirejs/require.js',
+
+      //Source Files
       {pattern: 'public/javascripts/*.js', included: true},
+
+      //Test Files
       {pattern: 'public/tests/*.spec.js', included: true}
     ],
 
