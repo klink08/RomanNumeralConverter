@@ -8,4 +8,8 @@ describe('romanNumeralConverter',function() {
     it('should convert 2 to II', function() {
         expect(arabicToRoamnNumeral(2)).toBe('II');
     });
+
+    it('should convert 3 to III', function() {
+        expect(arabicToRoamnNumeral(3)).toBe('III');
+    });
 });
