@@ -1,9 +1,7 @@
-function arabicToRoamnNumeral(num){
-    if(num === 1) {
-        return 'I';
-    } else if(num === 2) {
-        return 'II';
-    } else if(num === 3) {
-        return 'III';
+function arabicToRomanNumeral(arabicNumber){
+    var romanNumeralConversion = '';
+    for(var i = 0; i < arabicNumber; i++) {
+        romanNumeralConversion += 'I'
     }
+    return romanNumeralConversion;
 }
