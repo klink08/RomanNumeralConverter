@@ -26,4 +26,8 @@ describe('romanNumeralConverter',function() {
     it('should convert the arabic number 5 to V', function() {
        expect(arabicToRomanNumeral(5)).toBe('V');
     });
+
+    it('should convert the arabit number 10 to X', function() {
+        expect(arabicToRomanNumeral(10)).toBe('X');
+    });
 });

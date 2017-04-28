@@ -1,7 +1,9 @@
 function arabicToRomanNumeral(arabicNumber){
     var romanNumeralArray = [];
     for(var i = 1; i <= arabicNumber; i++) {
-        if(i % 9 === 0){
+        if(i % 10 === 0){
+            romanNumeralArray.splice(romanNumeralArray.length - 2, 1);
+        } else if(i % 9 === 0){
             romanNumeralArray.splice(romanNumeralArray.length - 1, 1);
             romanNumeralArray.splice(romanNumeralArray.length - 2, 1);
             romanNumeralArray.push('X');
