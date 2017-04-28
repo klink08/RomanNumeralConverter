@@ -1,5 +1,5 @@
 describe('romanNumeralConverter',function() {
-    describe('should convert the first 3 arabic numbers to Is: ', function(){
+    describe('should convert the first 3 arabic numbers to Is: ', function() {
         it('1 to I', function() {
             expect(arabicToRomanNumeral(1)).toBe('I');
         });
@@ -13,13 +13,17 @@ describe('romanNumeralConverter',function() {
         });
     });
 
-    describe('should use subtraction', function(){
+    describe('should use subtraction', function() {
         it('to convert 4 to IV', function() {
             expect(arabicToRomanNumeral(4)).toBe('IV');
         });
+
+        it('to convert 9 to IX', function(){
+            expect(arabicToRomanNumeral(9)).toBe('IX');
+        });
     });
 
-    it('should convert the arabic number 5 to V', function(){
+    it('should convert the arabic number 5 to V', function() {
        expect(arabicToRomanNumeral(5)).toBe('V');
     });
 });
