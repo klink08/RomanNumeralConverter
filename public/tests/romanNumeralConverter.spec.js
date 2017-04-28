@@ -13,13 +13,17 @@ describe('romanNumeralConverter',function() {
         });
     });
 
-    describe('should use subtraction', function() {
-        it('to convert 4 to IV', function() {
+    describe('should use subtraction to convert ', function() {
+        it('4 to IV', function() {
             expect(arabicToRomanNumeral(4)).toBe('IV');
         });
 
-        it('to convert 9 to IX', function(){
+        it('9 to IX', function(){
             expect(arabicToRomanNumeral(9)).toBe('IX');
+        });
+
+        it('40 to XL', function() {
+            expect(arabicToRomanNumeral(40)).toBe('XL');
         });
     });
 

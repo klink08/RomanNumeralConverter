@@ -1,7 +1,13 @@
 function arabicToRomanNumeral(arabicNumber){
     var romanNumeralArray = [];
     for(var i = 1; i <= arabicNumber; i++) {
-        if(i % 10 === 0){
+        if(i / 10 >= 4){
+            romanNumeralArray.splice(romanNumeralArray.length - 1, 1);
+            romanNumeralArray.splice(romanNumeralArray.length - 1, 1);
+            romanNumeralArray.splice(romanNumeralArray.length - 1, 1);
+            romanNumeralArray.splice(romanNumeralArray.length - 2, 1);
+            romanNumeralArray.push('L');
+        } else if(i % 10 === 0){
             romanNumeralArray.splice(romanNumeralArray.length - 2, 1);
         } else if(i % 10 === 9){
             romanNumeralArray.splice(romanNumeralArray.length - 1, 1);
