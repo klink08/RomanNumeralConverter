@@ -13,6 +13,12 @@ describe('romanNumeralConverter',function() {
         });
     });
 
+    describe('should use subtraction', function(){
+        it('to convert 4 to IV', function() {
+            expect(arabicToRomanNumeral(4)).toBe('IV');
+        });
+    });
+
     it('should convert the arabic number 5 to V', function(){
        expect(arabicToRomanNumeral(5)).toBe('V');
     });
