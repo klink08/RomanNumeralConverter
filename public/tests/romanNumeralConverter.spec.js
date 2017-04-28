@@ -23,11 +23,18 @@ describe('romanNumeralConverter',function() {
         });
     });
 
-    it('should convert the arabic number 5 to V', function() {
-       expect(arabicToRomanNumeral(5)).toBe('V');
-    });
+    describe('should convert the arabit number ', function() {
+        it('5 to V', function() {
+           expect(arabicToRomanNumeral(5)).toBe('V');
+        });
 
-    it('should convert the arabit number 10 to X', function() {
-        expect(arabicToRomanNumeral(10)).toBe('X');
-    });
+        it('10 to X', function() {
+            expect(arabicToRomanNumeral(10)).toBe('X');
+        });
+
+        it('30 to XXX', function() {
+            expect(arabicToRomanNumeral(30)).toBe('XXX');
+        })
+
+    })
 });
