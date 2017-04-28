@@ -39,5 +39,9 @@ describe('romanNumeralConverter',function() {
         it('39 to XXX', function() {
             expect(arabicToRomanNumeral(39)).toBe('XXXIX');
         });
+
+        it('49 to XLIX', function() {
+            expect(arabicToRomanNumeral(49)).toBe('XLIX');
+        })
     })
 });
