@@ -42,6 +42,14 @@ describe('romanNumeralConverter',function() {
 
         it('49 to XLIX', function() {
             expect(arabicToRomanNumeral(49)).toBe('XLIX');
-        })
+        });
+
+        it('50 to L', function() {
+            expect(arabicToRomanNumeral(50)).toBe('L');
+        });
+
+        it('78 to LXXVIII', function() {
+            expect(arabicToRomanNumeral(78)).toBe('LXXVIII');
+        });
     })
 });
