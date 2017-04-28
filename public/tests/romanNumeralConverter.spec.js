@@ -23,7 +23,7 @@ describe('romanNumeralConverter',function() {
         });
     });
 
-    describe('should convert the arabit number ', function() {
+    describe('should convert the arabic number ', function() {
         it('5 to V', function() {
            expect(arabicToRomanNumeral(5)).toBe('V');
         });
@@ -32,9 +32,8 @@ describe('romanNumeralConverter',function() {
             expect(arabicToRomanNumeral(10)).toBe('X');
         });
 
-        it('30 to XXX', function() {
-            expect(arabicToRomanNumeral(30)).toBe('XXX');
-        })
-
+        it('39 to XXX', function() {
+            expect(arabicToRomanNumeral(39)).toBe('XXXIX');
+        });
     })
 });
