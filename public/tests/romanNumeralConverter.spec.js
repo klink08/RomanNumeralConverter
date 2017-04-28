@@ -13,9 +13,7 @@ describe('romanNumeralConverter',function() {
         });
     });
 
-    describe('should convert multiples of 5 to Vs', function(){
-        it('5 to v', function(){
-           expect(arabicToRomanNumeral(5)).toBe('V');
-        });
+    it('should convert the arabic number 5 to V', function(){
+       expect(arabicToRomanNumeral(5)).toBe('V');
     });
 });

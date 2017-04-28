@@ -1,12 +1,12 @@
 function arabicToRomanNumeral(arabicNumber){
-    var romanNumeralConversion = '';
+    var romanNumeralConversion = [];
     for(var i = 1; i <= arabicNumber; i++) {
         if(i % 4 !== 0 && arabicNumber <= 3){
-            romanNumeralConversion += 'I'
+            romanNumeralConversion.push('I')
         }
         if(i % 5 === 0){
-            romanNumeralConversion += 'V'
+            romanNumeralConversion.push('V')
         }
     }
-    return romanNumeralConversion;
+    return [].concat.apply([], romanNumeralConversion).toString().replace(/,/g , "");
 }
