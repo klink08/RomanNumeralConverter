@@ -39,6 +39,8 @@ if(typeof process !== "undefined") {
     }
 }
 
+//Drew inspiration from http://blog.stevenlevithan.com/archives/javascript-roman-numeral-converter
+
 function arabicToRomanNumeral(num) {
     var originalNum = num;
     var romanSymbols = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1},
@@ -53,4 +55,18 @@ function arabicToRomanNumeral(num) {
     console.log(originalNum + ' is converted to ' + romanConversion);
 
     return romanConversion;
+}
+
+function romanNumeralToArabic(romanNumeral) {
+    var roman = romanNumeral.toUpperCase(),
+        romanSymbols = {I:1},
+        arabic = 0,
+        i = roman.length;
+    while (i--) {
+        if ( romanSymbols[roman[i]] < romanSymbols[roman[i + 1]] )
+            arabic -= romanSymbols[roman[i]];
+        else
+            arabic += romanSymbols[roman[i]];
+    }
+    return arabic;
 }

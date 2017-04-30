@@ -1,4 +1,4 @@
-describe('romanNumeralConverter',function() {
+describe('arabicToRomanNumeral',function() {
     describe('story test cases', function() {
         it('1 to I', function() {
             expect(arabicToRomanNumeral(1)).toBe('I');
@@ -74,4 +74,12 @@ describe('romanNumeralConverter',function() {
             expect(arabicToRomanNumeral(78)).toBe('LXXVIII');
         });
     })
+});
+
+describe('romanNumeralToArabic', function(){
+   it('should convert Is properly', function() {
+       expect(romanNumeralToArabic('I')).toBe(1);
+       expect(romanNumeralToArabic('II')).toBe(2);
+       expect(romanNumeralToArabic('III')).toBe(3);
+   });
 });
