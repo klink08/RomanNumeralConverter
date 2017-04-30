@@ -1,4 +1,18 @@
 describe('romanNumeralConverter',function() {
+    describe('story test cases', function() {
+        it('1 to I', function() {
+            expect(arabicToRomanNumeral(1)).toBe('I');
+        });
+
+        it('3 to III', function() {
+            expect(arabicToRomanNumeral(3)).toBe('III');
+        });
+
+        it('9 to IX', function(){
+            expect(arabicToRomanNumeral(9)).toBe('IX');
+        });
+    });
+
     describe('should convert the first 3 arabic numbers to Is: ', function() {
         it('1 to I', function() {
             expect(arabicToRomanNumeral(1)).toBe('I');
@@ -25,6 +39,14 @@ describe('romanNumeralConverter',function() {
         it('40 to XL', function() {
             expect(arabicToRomanNumeral(40)).toBe('XL');
         });
+
+        it('90 to XC', function() {
+            expect(arabicToRomanNumeral(90)).toBe('XC');
+        });
+
+        it('89 to XC', function() {
+            expect(arabicToRomanNumeral(124)).toBe('CXXIV');
+        })
     });
 
     describe('should convert the arabic number ', function() {
