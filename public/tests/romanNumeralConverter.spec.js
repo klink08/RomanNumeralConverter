@@ -77,10 +77,30 @@ describe('arabicToRomanNumeral',function() {
 });
 
 describe('romanNumeralToArabic', function(){
+    describe('story test cases', function() {
+        it('should convert I to 1', function() {
+            expect(romanNumeralToArabic('I')).toBe(1);
+        });
+
+        it('should convert III to 3', function(){
+            expect(romanNumeralToArabic('III')).toBe(3);
+        });
+
+        it('should convert IX to 9', function() {
+            expect(romanNumeralToArabic('IX')).toBe(9);
+        });
+
+        it('should convert MLXVI to 1066', function() {
+            expect(romanNumeralToArabic('MLXVI')).toBe(1066);
+        });
+
+        it('should convert MCMLXXXIX to 1989', function() {
+            expect(romanNumeralToArabic('MCMLXXXIX')).toBe(1989);
+        });
+    });
+
    it('should convert I to 1', function() {
-       expect(romanNumeralToArabic('I')).toBe(1);
        expect(romanNumeralToArabic('II')).toBe(2);
-       expect(romanNumeralToArabic('III')).toBe(3);
    });
 
    it('should convert V to 5', function() {
