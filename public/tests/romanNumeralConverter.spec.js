@@ -77,13 +77,33 @@ describe('arabicToRomanNumeral',function() {
 });
 
 describe('romanNumeralToArabic', function(){
-   it('should convert Is properly', function() {
+   it('should convert I to 1', function() {
        expect(romanNumeralToArabic('I')).toBe(1);
        expect(romanNumeralToArabic('II')).toBe(2);
        expect(romanNumeralToArabic('III')).toBe(3);
    });
 
-   it('should convert Vs properly', function() {
+   it('should convert V to 5', function() {
        expect(romanNumeralToArabic('V')).toBe(5);
-   })
+   });
+
+    it('should convert X to 10', function() {
+        expect(romanNumeralToArabic('X')).toBe(10);
+    });
+
+    it('should convert L to 50', function() {
+        expect(romanNumeralToArabic('L')).toBe(50);
+    });
+
+    it('should convert C to 100', function() {
+        expect(romanNumeralToArabic('C')).toBe(100);
+    });
+
+    it('should convert D to 500', function() {
+        expect(romanNumeralToArabic('D')).toBe(500);
+    });
+
+    it('should convert M to 1000', function() {
+        expect(romanNumeralToArabic('M')).toBe(1000);
+    });
 });
