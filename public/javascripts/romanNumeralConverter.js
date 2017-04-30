@@ -34,8 +34,10 @@
 
 if(typeof process !== "undefined") {
     var args = process.argv;
-    if (args) {
-        arabicToRomanNumeral(args[2]);
+    if (args[2] == "toRoman") {
+        arabicToRomanNumeral(args[3]);
+    } else if(args[2] == "toArabic") {
+        romanNumeralToArabic(args[3]);
     }
 }
 
@@ -68,5 +70,8 @@ function romanNumeralToArabic(romanNumeral) {
         else
             arabic += romanSymbols[roman[i]];
     }
+
+    console.log(romanNumeral + ' is converted to ' + arabic);
+
     return arabic;
 }
