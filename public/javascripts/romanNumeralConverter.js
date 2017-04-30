@@ -32,7 +32,15 @@
 //     return [].concat.apply([], romanNumeralArray).toString().replace(/,/g , "");
 // }
 
+if(typeof process !== "undefined") {
+    var args = process.argv;
+    if (args) {
+        arabicToRomanNumeral(args[2]);
+    }
+}
+
 function arabicToRomanNumeral(num) {
+    var originalNum = num;
     var romanSymbols = {M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1},
         romanConversion = '';
     for (var i in romanSymbols ) {
@@ -41,5 +49,8 @@ function arabicToRomanNumeral(num) {
             num -= romanSymbols[i];
         }
     }
+
+    console.log(originalNum + ' is converted to ' + romanConversion);
+
     return romanConversion;
 }

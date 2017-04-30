@@ -15,9 +15,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      //Dependencies
-      'node_modules/requirejs/require.js',
-
       //Source Files
       {pattern: 'public/javascripts/*.js', included: true},
 
@@ -67,7 +64,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
