@@ -59,7 +59,7 @@ function arabicToRomanNumeral(num) {
 
 function romanNumeralToArabic(romanNumeral) {
     var roman = romanNumeral.toUpperCase(),
-        romanSymbols = {I:1},
+        romanSymbols = {I:1, V:5},
         arabic = 0,
         i = roman.length;
     while (i--) {

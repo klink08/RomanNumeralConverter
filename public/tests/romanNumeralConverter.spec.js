@@ -82,4 +82,8 @@ describe('romanNumeralToArabic', function(){
        expect(romanNumeralToArabic('II')).toBe(2);
        expect(romanNumeralToArabic('III')).toBe(3);
    });
+
+   it('should convert Vs properly', function() {
+       expect(romanNumeralToArabic('V')).toBe(5);
+   })
 });
